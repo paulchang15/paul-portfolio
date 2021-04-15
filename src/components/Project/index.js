@@ -3,12 +3,11 @@ import Card from "react-bootstrap/Card";
 
 const Project = ({ prop }) => {
   return (
-    <Card border="primary">
+    <Card border="dark">
       <Card.Header>{prop.name}</Card.Header>
       <Card.Img
-        src={require(`../../assets/images/${prop.name}.PNG`).default}
-        alt="iMemeit"
-        key={prop.name}
+        src={require(`../../assets/images/${prop.link}.PNG`).default}
+        alt={prop.name}
         width={300}
         height={200}
         thumbnail

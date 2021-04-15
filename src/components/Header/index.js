@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import NavBar from "../Navigation";
-
+import Navigation from "../Navigation";
+import Jumbotron from "react-bootstrap/Jumbotron";
 const Header = ({ switchEx }) => {
   const [contactSelected, setContactSelected] = useState(false);
   const [categories] = useState([
@@ -25,17 +25,19 @@ const Header = ({ switchEx }) => {
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
-    <header>
-      <h1>Paul Chang</h1>
-      <NavBar
+    <div>
+      <Navigation
         categories={categories}
         switchEx={switchEx}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-      ></NavBar>
-    </header>
+      ></Navigation>
+      <Jumbotron fluid>
+        <h1>Hello! Welcome to my Portfolio!</h1>
+      </Jumbotron>
+    </div>
   );
 };
 

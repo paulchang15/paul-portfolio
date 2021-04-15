@@ -1,0 +1,9 @@
+.main-footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(223, 222, 219);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

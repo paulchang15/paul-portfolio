@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-// import Project from "./components/Project";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import Container from "react-bootstrap/Container";
+import { Document, Page, pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 function App() {
   const [html, setHtml] = useState();
 
@@ -31,11 +31,11 @@ function App() {
   };
 
   return (
-    <div>
+    <Container fluid>
       <Header switchEx={switchEx} />
       <div className="container">{html}</div>
       <Footer />
-    </div>
+    </Container>
   );
 }
 
