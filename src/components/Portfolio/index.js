@@ -26,6 +26,13 @@ const Portfolio = () => {
       deployedLink: "https://jleatham78.github.io/road-trip/",
       github: "https://github.com/jleatham78/road-trip",
     },
+    {
+      name: "Only Memes",
+      link: "only_memes",
+      description:
+        "App to buy booster packs containing memes of different rarities to add to your own collection and share with the community.",
+      github: "https://github.com/corycalaway/only_memes",
+    },
   ];
   return (
     <div>
